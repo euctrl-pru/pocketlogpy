@@ -34,7 +34,7 @@ def pl_get_logs(
         Flow name to filter by.
     status : str, optional
         Status to filter by: ``"SUCCESS"``, ``"ERROR"``, or ``"FATAL"``.
-    from\_ : datetime or str, optional
+    from_ : datetime or str, optional
         Start timestamp (inclusive).
     to : datetime or str, optional
         End timestamp (inclusive).
