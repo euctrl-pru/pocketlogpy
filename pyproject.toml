@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pocketlogpy"
+version = "0.1.0"
+description = "Log application events to PocketBase from Python"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Quinten Goens", email = "qgoens@gmail.com"}]
+requires-python = ">=3.9"
+dependencies = ["requests>=2.28"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pytest-mock>=3.0"]
+
+[project.urls]
+Homepage = "https://github.com/euctrl-pru/pocketlogpy"
+Repository = "https://github.com/euctrl-pru/pocketlogpy"
+Issues = "https://github.com/euctrl-pru/pocketlogpy/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pocketlogpy"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
