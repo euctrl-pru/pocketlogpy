@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pocketlogpy"
+version = "0.1.0"
+description = "Log application events to PocketBase from Python"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "Quinten Goens", email = "qgoens@gmail.com" },
+]
+dependencies = [
+    "requests>=2.28",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "responses>=0.23",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "integration: tests requiring a live PocketBase instance",
+]
